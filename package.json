@@ -1,0 +1,12 @@
+{
+  "name": "baseui-portable-repro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @baseui-portable-repro/web dev",
+    "build": "pnpm build"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3"
+  }
+}

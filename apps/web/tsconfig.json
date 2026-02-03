@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist/types",
+    "rootDir": "./src",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "types": ["vite/client"]
+  },
+  "include": ["src"],
+  "references": [{ "path": "../../packages/ui" }],
+  "exclude": ["./dist", "**/node_modules"]
+}

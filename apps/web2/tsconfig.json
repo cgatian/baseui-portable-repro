@@ -3,8 +3,10 @@
   "compilerOptions": {
     "outDir": "./dist/types",
     "rootDir": "./src",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"]
+    "allowJs": true,
+    "esModuleInterop": true
   },
   "include": ["src"],
+  "references": [{ "path": "../web" }],
   "exclude": ["./dist", "**/node_modules"]
 }

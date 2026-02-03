@@ -1,6 +1,8 @@
 {
-  "name": "@baseui-portable-repro/web",
+  "name": "@baseui-portable-repro/web2",
+  "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,13 +12,12 @@
   },
   "exports": {
     ".": {
-      "source": "./src/index.ts",
-      "types": "./dist/types/index.d.ts",
-      "default": "./src/index.ts"
+      "app": "./src/index.ts"
     }
   },
   "dependencies": {
     "@baseui-portable-repro/ui": "workspace:*",
+    "@baseui-portable-repro/web": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-redux": "8.1.3"

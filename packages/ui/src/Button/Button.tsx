@@ -1,5 +1,6 @@
 import { Button as BaseButton } from '@base-ui/react/button';
 import type { CSSProperties } from 'react';
+import { forwardRef } from 'react';
 
 const defaultStyle: CSSProperties = {
   display: 'inline-flex',
@@ -16,9 +17,13 @@ const defaultStyle: CSSProperties = {
   backgroundColor: 'blue',
 };
 
-export function Button({ style, ...props }: Button.Props) {
-  return <BaseButton {...props} style={{ ...defaultStyle, ...style }} />;
-}
+export const Button = forwardRef<HTMLButtonElement, Button.Props>(
+  ({ style, ...props }, ref) => {
+    return (
+      <BaseButton ref={ref} {...props} style={{ ...defaultStyle, ...style }} />
+    );
+  },
+);
 
 export declare namespace Button {
   export interface Props extends BaseButton.Props {}

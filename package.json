@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "pnpm --filter @baseui-portable-repro/web dev",
-    "build": "pnpm build"
+    "build": "pnpm build",
+    "build:types": "pnpm -r run build:types"
   },
   "devDependencies": {
     "typescript": "~5.9.3"
